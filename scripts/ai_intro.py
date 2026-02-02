@@ -1,2 +1,6 @@
 print("Welcome to RSH-AI")
 print("Learning AI & automation step by step")
+print ("RSH-AI Project Strated")
+print ("This is my first AI automation script")
+name = input ("Ramashish")
+print ("Welcome"Ramshish)
