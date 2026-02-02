@@ -1,0 +1,5 @@
+keyword = input("video topic likho")
+print ("viral Title idea")
+print ("1. Ye" keyword,"dekh ke dimag hil jayega")
+print ("2." keyword,"ka ye sach koi nahi batata")
+print ("3." Agar tum",keyword, "karte ho to ye video miss mat karo")
