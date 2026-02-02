@@ -8,40 +8,51 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
       background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .container {
       background: white;
-      padding: 30px;
+      padding: 25px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: inline-block;
-      max-width: 400px;
       width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
     }
 
     input {
-      padding: 10px;
+      padding: 12px;
       width: 100%;
       border-radius: 5px;
       border: 1px solid #ddd;
       margin-bottom: 10px;
+      font-size: 16px;
     }
 
     button {
-      padding: 10px 20px;
+      padding: 10px;
       border: none;
       background: #ff4757;
       color: white;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 14px;
+      margin: 5px 3px;
+    }
+
+    button.reset {
+      background: #57606f;
     }
 
     button:hover {
-      background: #e84118;
+      opacity: 0.9;
     }
 
     .result {
@@ -66,19 +77,23 @@
     <h2>🔥 Viral Title Generator</h2>
     <p>Apna video topic yahan likhein:</p>
 
-    <input type="text" id="topicInput" placeholder="Jaise: Cartoon Story...">
-    <button onclick="generateTitles()">Generate</button>
+    <input type="text" id="topicInput" placeholder="Jaise: Cartoon Story">
+
+    <button type="button" onclick="generateTitles()">Generate</button>
+    <button type="button" class="reset" onclick="resetAll()">Reset</button>
 
     <div class="result" id="results"></div>
   </div>
 
   <script>
     function generateTitles() {
-      let topic = document.getElementById("topicInput").value.trim();
-      let resDiv = document.getElementById("results");
+      const topicInput = document.getElementById("topicInput");
+      const topic = topicInput.value.trim();
+      const resDiv = document.getElementById("results");
 
       if (topic === "") {
         alert("Kuch likho toh sahi!");
+        topicInput.focus();
         return;
       }
 
@@ -87,6 +102,12 @@
         <div class="title-card">2️⃣ <b>${topic}</b> ka ye sach koi nahi batata 🤯</div>
         <div class="title-card">3️⃣ Agar tum <b>${topic}</b> pasand karte ho to ye video miss mat karo 🔥</div>
       `;
+    }
+
+    function resetAll() {
+      document.getElementById("topicInput").value = "";
+      document.getElementById("results").innerHTML = "";
+      document.getElementById("topicInput").focus();
     }
   </script>
 
