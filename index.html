@@ -1,0 +1,51 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;hi&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;RSH-AI Viral Title Generator&lt;/title&gt;
+&lt;style&gt;
+body { font-family: Arial, sans-serif; text-align: center; padding: 50px;
+background-color: #f4f4f9; }
+.container { background: white; padding: 30px; border-radius: 15px; box-
+shadow: 0 4px 10px rgba(0,0,0,0.1); display: inline-block; }
+input { padding: 10px; width: 250px; border-radius: 5px; border: 1px solid
+#ddd; }
+button { padding: 10px 20px; border: none; background: #ff4757; color:
+white; border-radius: 5px; cursor: pointer; }
+.result { margin-top: 20px; text-align: left; }
+.title-card { background: #e1f5fe; padding: 10px; margin: 5px 0; border-left:
+5px solid #03a9f4; border-radius: 4px; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+&lt;h2&gt;�� Viral Title Generator&lt;/h2&gt;
+&lt;p&gt;Apna video topic yahan likhein:&lt;/p&gt;
+&lt;input type=&quot;text&quot; id=&quot;topicInput&quot; placeholder=&quot;Jaise: Cartoon Story...&quot;&gt;
+&lt;button onclick=&quot;generateTitles()&quot;&gt;Generate&lt;/button&gt;
+
+&lt;div class=&quot;result&quot; id=&quot;results&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function generateTitles() {
+let topic = document.getElementById(&#39;topicInput&#39;).value;
+let resDiv = document.getElementById(&#39;results&#39;);
+
+if(topic.trim() === &quot;&quot;) { alert(&quot;Kuch likho toh sahi!&quot;); return; }
+
+resDiv.innerHTML = `
+&lt;div class=&quot;title-card&quot;&gt;1. Ye &lt;b&gt;${topic}&lt;/b&gt; dekh ke dimag hil jayega
+��&lt;/div&gt;
+&lt;div class=&quot;title-card&quot;&gt;2. &lt;b&gt;${topic}&lt;/b&gt; ka ye sach koi nahi batata
+��&lt;/div&gt;
+&lt;div class=&quot;title-card&quot;&gt;3. Agar tum &lt;b&gt;${topic}&lt;/b&gt; karte ho to ye video
+miss mat karo ��&lt;/div&gt;
+`;
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
